@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введи слово: ");
+        string text = Console.ReadLine();
+
+        string longest = "";
+
+        for (int i = 0; i < text.Length; i++)
+        {
+            string current = "";
+
+            for (int j = i; j < text.Length; j++)
+            {
+                if (current.Contains(text[j]))
+                    break;
+
+                current += text[j];
+
+                if (current.Length > longest.Length)
+                    longest = current;
+            }
+        }
+
+        Console.WriteLine("Найдовший унікальний підрядок: " + longest);
+    }
+}

@@ -1,1 +1,0 @@
-# Algorithm-find-the-longest-unique-substring-in-a-word
